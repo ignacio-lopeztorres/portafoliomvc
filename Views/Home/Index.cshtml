@@ -1,35 +1,11 @@
-﻿@model Persona
-
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
-    string ConvierteAMayuscula(string valor)
-    {
-        return valor.ToUpper();
-    }
-    DateTime hoy = DateTime.Now;
-    //crea una lista
-    var personas = new List<string>() {"Felipe", "Claudia", "Roberto"};
 }
 
 <div class="text-center">
     <!-- el model sirve para acceder al valor del modelo-->
-    <h1 class="display-4">Soy @ConvierteAMayuscula(Model.Nombre) (@Model.Edad)</h1>
-    <h4>@hoy.ToString("dd/MM/yyyy hh:mm:ss tt")</h4>
-    @if(Model.Edad >= 18) {
-        <h4>eres mayor de Edad</h4>
-    } else
-    {
-        <h4>Eres menor de edad</h4>    
-    }
+    <h1 class="display-4">Soy Ignacio Lopez Torres (30)</h1>
     <h2>Soy un desarrollador especializandose en tecnologias .NET y JavaScript </h2>
-
-    <ul>
-
-    @foreach (var persona in personas)
-    {
-        <li>@persona</li>
-    }
-    </ul>
 
     <img
         id="foto"
