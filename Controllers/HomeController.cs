@@ -15,9 +15,10 @@ namespace Portafolio.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.Name = "Igncio López Torres";
+            //uso de un modelo fuertemente tipado
             ViewBag.Edad = 30;
-            return View();
+            //el primer parametro indica el nombre de la vista y el segundo es el modelo que se le pasara a la vista
+            return View("Index", "Roberto de la rosa");
         }
 
         public IActionResult Privacy()
