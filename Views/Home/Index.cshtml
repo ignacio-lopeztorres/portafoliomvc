@@ -1,5 +1,4 @@
-﻿//indica el tipo de dato del modelo que va a recibir desde el contolador
-@model string
+﻿@model Persona
 
 @{
     ViewData["Title"] = "Home Page";
@@ -7,7 +6,7 @@
 
 <div class="text-center">
     <!-- el model sirve para acceder al valor del modelo-->
-    <h1 class="display-4">Soy @Model (@ViewBag.Edad)</h1>
+    <h1 class="display-4">Soy @Model.Nombre (@Model.Edad)</h1>
     <h2>Soy un desarrollador semi jr  especializandose en tecnologias .NET y JavaScript </h2>
 
     <img
