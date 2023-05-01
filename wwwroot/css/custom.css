@@ -21,3 +21,11 @@
 #imagen-dotnet {
     width: 500px;
 }
+
+.cabecera {
+    font-weight: bold;
+}
+
+.habilidades ul {
+    list-style: none;
+}
