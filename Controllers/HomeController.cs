@@ -36,9 +36,14 @@ namespace Portafolio.Controllers
         {
             return View();
         }
-
+                                                               
         [HttpPost] //atributo de un metodo
         public IActionResult Contacto(ContactoViewModel contactoViewModel) 
+        {
+            //redireccion a una vista
+            return RedirectToAction("Agradecimiento");
+        }
+        public IActionResult Agradecimiento()
         {
             return View();
         }
