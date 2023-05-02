@@ -6,6 +6,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IRepositorioProyectos, RepositorioProyectos>(); //para la inyeccion de dependencias
 
+builder.Services.AddTransient<ServicioTransitorio>();
+builder.Services.AddScoped<ServicioDelimitado>();
+builder.Services.AddSingleton<ServicioUnico>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
