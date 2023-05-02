@@ -2,7 +2,7 @@
 
 namespace Portafolio.Servicios
 {
-    public class RepositorioProyectos
+    public class RepositorioProyectos : IRepositorioProyectos
     {
         //el principio de responsabilidad ayuda a que una clase ejecute una tarea
         public List<Proyecto> ObtenerProyectos()

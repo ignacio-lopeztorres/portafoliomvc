@@ -8,10 +8,10 @@ namespace Portafolio.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly RepositorioProyectos repositorioProyectos;
+        private readonly IRepositorioProyectos repositorioProyectos;
 
         //la inyecion de dependencias se da en el constructor de la clase para poder se usada dentro de la clase
-        public HomeController(ILogger<HomeController> logger, RepositorioProyectos repositorioProyectos)
+        public HomeController(ILogger<HomeController> logger, IRepositorioProyectos repositorioProyectos)
         {
             _logger = logger;
             this.repositorioProyectos = repositorioProyectos;
