@@ -37,6 +37,11 @@ namespace Portafolio.Controllers
             return View();
         }
 
+        [HttpPost] //atributo de un metodo
+        public IActionResult Contacto(ContactoViewModel contactoViewModel) 
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
