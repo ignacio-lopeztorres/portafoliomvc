@@ -32,6 +32,11 @@ namespace Portafolio.Controllers
             return View(proyectos);
         }
 
+        public IActionResult Contacto()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
