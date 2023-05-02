@@ -8,13 +8,16 @@ namespace Portafolio.Controllers
     public class HomeController : Controller
     {
         private readonly IRepositorioProyectos repositorioProyectos;
+        private readonly IServicioEmail servicioEmail;
 
         //la inyecion de dependencias se da en el constructor de la clase para poder se usada dentro de la clase
         public HomeController(
-            IRepositorioProyectos repositorioProyectos
+            IRepositorioProyectos repositorioProyectos,
+            IServicioEmail servicioEmail
             )
         {
             this.repositorioProyectos = repositorioProyectos;
+            this.servicioEmail = servicioEmail;
         }
 
         public IActionResult Index()
@@ -38,8 +41,9 @@ namespace Portafolio.Controllers
         }
                                                                
         [HttpPost] //atributo de un metodo
-        public IActionResult Contacto(ContactoViewModel contactoViewModel) 
+        public async Task<IActionResult> Contacto(ContactoViewModel contactoViewModel) 
         {
+            await servicioEmail.Enviar(contactoViewModel);
             //redireccion a una vista
             return RedirectToAction("Agradecimiento");
         }
